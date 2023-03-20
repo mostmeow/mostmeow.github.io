@@ -1,0 +1,55 @@
+{% extends 'app_general/components/base.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<section>
+    <!--The div element for the map -->
+    <div id="map" style="width: 100%; height: 400px; z-index: 99;"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrZCJ2f9r1HqQPECkgvZZKD5LVtxKPiw&callback=initMap&v=weekly"
+      defer
+    ></script>
+</section>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 13.7563, lng: 100.5018 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: uluru,
+        });
+
+        const iconBase =
+            "{% static 'app_general/assets/pic/smile.png' %}";
+
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: iconBase,
+            title:"Hello World!"
+        });
+        const marker2 = new google.maps.Marker({
+            position: { lat: 13.7663, lng: 100.5018 },
+            map: map,
+            icon: iconBase
+        });
+    }
+    
+
+    window.initMap = initMap;
+    </script>
+{% endblock %}
