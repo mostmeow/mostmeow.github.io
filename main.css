@@ -1,0 +1,178 @@
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  left: 0;
+  width: 319px;
+  display: table;
+  margin: 0 auto;
+  transform: translateY(-50%);
+
+  z-index: 101;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: red;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 34%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 70%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}
+
+
+
+
+/* SKILLBAR */
+.skillbar {
+  font-family: "Open Sans", "sans-serif";
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #eee;
+  height: 35px;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  background: #6adcfa;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 35px;
+  width: 0px;
+  background: #6adcfa;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: #444;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ///////////////////// */
+.scrollsec {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.scrolldiv {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+}

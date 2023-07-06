@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous"></script>
+
+    <title>myportfolio</title>
+</head>
+<body>
+    
+
+
+    <div style="position: fixed; width: 100%; height: 70px; background-color: #292929; z-index: 100;">
+        <nav>
+            <a href="#div2">HOME</a>
+            <a href="#div3">CODING</a>
+            <a href="#div4">GUITAR</a>
+            <div id="indicator"></div>
+        </nav>
+    </div>
+
+
+
+    
+
+    <section class="scrollsec">
+
+        <div class="div1 scrolldiv" id="div1" style="padding-top: 70px;">
+
+        </div>
+
+        <div class="div2 scrolldiv" id="div2" style="padding-top: 70px;">
+
+        </div>
+
+        <div class="div3 scrolldiv" id="div3" style="padding-top: 70px;">
+
+            <div class="skillbar clearfix " data-percent="65%">
+                <div class="skillbar-title" style="background: #88cd2a;"><span>HTML5</span></div>
+                <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                <div class="skill-bar-percent">65%</div>
+            </div>
+            <!---  CSS --->
+            <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title" style="background: #00a8ff;"><span>CSS</span></div>
+                <div class="skillbar-bar" style="background: #00a8ff;"></div>
+                <div class="skill-bar-percent">85%</div>
+            </div>
+            <!---- /CSS --->
+            <!----- jQuery  ------->
+            <div class="skillbar clearfix " data-percent="60%">
+                <div class="skillbar-title" style="background: #00a8ff;"><span>CSS</span></div>
+                <div class="skillbar-bar" style="background: #00a8ff;"></div>
+                <div class="skill-bar-percent">60%</div>
+            </div>
+            <!----- /jQuery  ------->
+            <script>
+                jQuery('.skillbar').each(function(){
+                    jQuery(this).find('.skillbar-bar').animate({
+                        width:jQuery(this).attr('data-percent')
+                    },2000);
+                });
+            </script>
+        </div>
+
+        <div class="div4 scrolldiv" id="div4">
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
