@@ -79,7 +79,7 @@
 
         <!-- BG PARALLX -->
         <div style="width: 100%; height: 100%; transform: translateZ(-3px) scale(11); position: absolute; z-index: -1;">
-            <img style="width: 100%; height: 100%; object-fit: cover;" src="bg.jpg" alt="" />
+            <img id="bgimg" style="width: 100%; height: 100%; object-fit: cover;" src="bg.jpg" alt="" />
         </div>
 
 
@@ -324,11 +324,9 @@
 
 
     <script>
-
-        window.onload = function() {
+        document.getElementById('bgimg').onload = function() {
             document.getElementById('loadingscreen').style.display = "none"
-        }
-        
+        };
     </script>
 
 
