@@ -318,15 +318,38 @@
         })
     </script>
 
-    <div id="loadingscreen" style="position: fixed; width: 100%; height: 100%; z-index: 200;">
+    <div id="loadingscreen" style="position: fixed; width: 100%; height: 100%; z-index: 200; display: block;">
 
     </div>
 
 
     <script>
-        window.onload = function() {
-            document.getElementById('loadingscreen').style.display = "none"
+        function checkImagesLoaded() {
+        // Get all the images on the page
+            var images = document.querySelectorAll('img');
+
+            for (var i = 0; i < images.length; i++) {
+                var img = new window.Image();
+                img.src = images[i].src;
+                img.onload = function() {
+                imagesLoaded++;
+                }
+            }
+            if (imagesLoaded == images.length) {
+                // If all the images have finished loading, do something
+                // console.log('All images have finished loading');
+                document.getElementById('loadingscreen').style.display = "none"
+                return true
+            } else {
+                return false
+            }
         }
+
+        let checkLoad = setInterval(() => {
+            if (checkImagesLoaded() === true) {
+                clearInterval(checkLoad)
+            }
+        }, 1000)
     </script>
 
 
