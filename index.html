@@ -97,9 +97,25 @@
         <div class="div2 scrolldiv" id="div2" style="padding-top: 70px;">
 
             <div class="owl-carousel owl-theme owlslide">
-                <div class="item"><div class="owlcard"></div></div>
-                <div class="item"><div class="owlcard"></div></div>
-                <div class="item"><div class="owlcard"></div></div>
+
+                <div class="item">
+                    <div class="owlcard">
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="owlcard">
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="owlcard">
+
+                    </div>
+                </div>
+                
             </div>
 
             <script>
@@ -157,103 +173,42 @@
 
         <div class="div3 scrolldiv" id="div3" style="padding-top: 70px;">
 
-            <section class="container content-section text-center">
-                <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                    <div id="skill-bar-wrapper">
-                      <!-- <h1>Skills</h1> -->
-                      <div class="text-left">
-          
-                        <!-- C++ -->
-                        C++<span style="float:right;">95%</span>
-                        <div class="skillbar-container clearfix" data-percent="95%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- Fortran -->
-                        Fortran<span style="float:right;">65%</span>
-                        <div class="skillbar-container clearfix" data-percent="65%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- Java -->
-                        Java<span style="float:right;">35%</span>
-                        <div class="skillbar-container clearfix" data-percent="35%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- Cmake -->
-                        Cmake<span style="float:right;">75%</span>
-                        <div class="skillbar-container clearfix" data-percent="75%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- HTML -->
-                        HTML<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- JavaScript -->
-                        JavaScript<span style="float:right;">45%</span>
-                        <div class="skillbar-container clearfix" data-percent="45%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-          
-                        <!-- jQuery -->
-                        jQuery<span style="float:right;">50%</span>
-                        <div class="skillbar-container clearfix" data-percent="50%">
-                          <div class="skills" style="background: white;"></div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+            <div class="icondiv">
+                <img class="iconsvg" src="svg/python.svg">
+                <img class="iconsvg" src="svg/django.svg">
+                <img class="iconsvg" src="svg/flask.svg">
+                <img class="iconsvg" src="svg/html.svg">
+                <img class="iconsvg" src="svg/css.svg">
+                <img class="iconsvg" src="svg/javascript.svg">
+                <img class="iconsvg" src="svg/jquery.svg">
+                <img class="iconsvg" src="svg/react.svg">
+                <img class="iconsvg" src="svg/mysql.svg">
+                <img class="iconsvg" src="svg/postgresql.svg">
+                <img class="iconsvg" src="svg/bootstrap.svg">
+                <img class="iconsvg" src="svg/github.svg">
+                <img class="iconsvg" src="svg/digitalocean.svg">
+                <img class="iconsvg" src="svg/api.svg">
+            </div>
 
             <style>
-                .skillbar-container {
-                    position:relative;
-                    display:block;
-                    margin-bottom: 15px;   
-                    width: 100%;
-                    background-color: #666463;
-                    background-color: rgba(255,255,255,.1);
-                    height:35px;
-                    height:5px;
-                }
-                
-                .skills {
-                    height:35px;
-                    height:5px;
-                    width:0px;
-                }
+                .icondiv {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    
+                    transform: translate(-50%, -50%);
 
-                .text-left {
-                    color: var(--white);
-                    padding: 4vw;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    justify-content: left;
+                    align-items: center;
+                }
+                .iconsvg {
+                    width: 5vw;
+                    min-width: 35px;
+                    margin: 10px;
                 }
             </style>
-
-            <script>
-                $('.scrollsec').scroll(function() {
-                    var hT = $('#skill-bar-wrapper').offset().top,
-                        hH = $('#skill-bar-wrapper').outerHeight(),
-                        wH = $(window).height(),
-                        wS = $(this).scrollTop();
-                    if (wS > (hT+hH-1.4*wH)){
-                        jQuery('.scrollsec').ready(function(){
-                            jQuery('.skillbar-container').each(function(){
-                                jQuery(this).find('.skills').animate({
-                                    width:jQuery(this).attr('data-percent')
-                                }, 5000); // 5 seconds
-                            });
-                        });
-                    }
-                });
-            </script>
-
         </div>
 
 
