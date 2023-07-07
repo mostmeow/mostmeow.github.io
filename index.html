@@ -325,9 +325,11 @@
 
 
     <script>
-        document.getElementById('bgimg').onload = function() {
+        window.addEventListener("load", event => {
+            var image = document.querySelector('#bgimg');
+            var isLoaded = image.complete && image.naturalHeight !== 0;
             document.getElementById('loadingscreen').style.display = "none"
-        };
+        });
     </script>
 
 
