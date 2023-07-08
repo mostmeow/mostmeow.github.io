@@ -24,6 +24,8 @@
 
 
     <title>myportfolio</title>
+    <link rel="icon" href="favicon.ico"/>
+
 </head>
 <body>
     
@@ -102,8 +104,10 @@
                     <div class="owlcard">
                         <img class="owlimage" src="image/kinmap.png">
                         <div class="owlcardtext">
-                            <p>Social/Food Web Application</p>
-                            <a href="https://www.kinmap.org" target="_blank"><i class="bi bi-link"></i> www.kinmap.org</a>
+                            <div>
+                                <p>Social/Food Web Application</p>
+                                <a href="https://www.kinmap.org" target="_blank"><i class="bi bi-link"></i> www.kinmap.org</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,8 +116,10 @@
                     <div class="owlcard">
                         <img class="owlimage" src="image/listen.png">
                         <div class="owlcardtext">
-                            <p>E-commerce + Payment gateway</p>
-                            <a href="https://www.listen.company" target="_blank"><i class="bi bi-link"></i> www.listen.company</a>
+                            <div>
+                                <p>E-commerce + Payment gateway</p>
+                                <a href="https://www.listen.company" target="_blank"><i class="bi bi-link"></i> www.listen.company</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,8 +128,10 @@
                     <div class="owlcard">
                         <img class="owlimage" src="image/cmsk.png">
                         <div class="owlcardtext">
-                            <p>Registration system + Payment gateway (Full-time job)</p>
-                            <a href="https://form.mycmsk.comp" target="_blank"><i class="bi bi-link"></i> www.listen.company</a>
+                            <div>
+                                <p>Registration system + Payment gateway (Full-time job)</p>
+                                <a href="https://form.mycmsk.comp" target="_blank"><i class="bi bi-link"></i> www.listen.company</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,8 +193,12 @@
                     transform: translateX(-50%);
                 }
                 .owlcardtext {
-                    padding: 20px;
+                    position: relative;
+                }
+                .owlcardtext div {
                     font-size: 15px;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
                 }
                 .owlcardtext a {
                     color: var(--shade2);
