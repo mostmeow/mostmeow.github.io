@@ -151,3 +151,33 @@ nav ul li a {
   scroll-snap-align: start;
   position: relative;
 }
+
+.column h1 {
+  font-size: 4vw;
+  font-weight: 700;
+}
+.ulex li, .ctext {
+  font-weight: 400;
+  font-size: 2vw;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1; /* Equal width for both columns */
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column; /* Change to a single column layout */
+  }
+
+  .column {
+    flex: none; /* Disable flex to make each column take full width */
+    margin-top: 10px;
+  }
+}
