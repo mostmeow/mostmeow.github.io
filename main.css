@@ -12,7 +12,7 @@ body { font-family: 'Poppins', sans-serif; }
 
 /* NAVBAR */
 nav {
-  min-width: 28rem;
+  font-size: 10px;
   /* background: white; */
   background-color: transparent;
 
@@ -41,14 +41,13 @@ nav ul {
   position: fixed;
   top: 0;
   left: 50%;
-  width: 300px;
+  width: 200px;
   transform: translateX(-50%);
 }
 
 nav ul li a {
   color: var(--white);
   text-decoration: none;
-  padding: 0.1rem;
   font-weight: 700;
 }
 
@@ -152,15 +151,10 @@ nav ul li a {
   position: relative;
 }
 
-.column h1 {
-  font-size: 4vw;
-  font-weight: 700;
+.column {
+  font-size: 10px;
 }
-.ulex li, .ctext {
-  font-weight: 400;
-  font-size: 2vw;
-  margin: 10px;
-}
+
 
 .container {
   display: flex;

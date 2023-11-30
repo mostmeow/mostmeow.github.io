@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="My portfolio">
+    <meta property="og:description" content="dev portfolio">
+    <meta property="og:image" content="bg.jpg">
+    <meta property="og:url" content="mostmeow.github.io"> 
 
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
@@ -132,40 +138,57 @@
 
                 <div class="item">
                     <div class="owlcard">
-                        <img class="owlimage" src="image/kinmap.png">
-                        <div class="owlcardtext">
-                            <div>
+                        <a href="https://play.google.com/store/apps/developer?id=Day1" target="_blank">
+                            <img class="owlimage" src="image/mobile.jpg">
+                        
+                            <div class="owlcardtext">
+                                <h3>Android app Play store</h3>
+                                <p>Android mobilee application</p>
+                                <a href="https://play.google.com/store/apps/developer?id=Day1" target="_blank"><i class="bi bi-link"></i> play store <span style="color: red; font-weight: 700;">Click!</span></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="owlcard">
+                        <a href="https://www.kinmap.org" target="_blank">
+                            <img class="owlimage" src="image/kinmap.png">
+                        
+                            <div class="owlcardtext">
                                 <h3>Kinmap</h3>
                                 <p>Social/Food Web Application (Personal project)</p>
                                 <a href="https://www.kinmap.org" target="_blank"><i class="bi bi-link"></i> www.kinmap.org <span style="color: red; font-weight: 700;">Click!</span></a>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="owlcard">
-                        <img class="owlimage" src="image/listen.png">
-                        <div class="owlcardtext">
-                            <div>
-                                <h3>Listen</h3>
+                        <a href="https://www.thamux.com" target="_blank">
+                            <img class="owlimage" src="image/thamux.png">
+                        
+                            <div class="owlcardtext">
+                                <h3>Thamux</h3>
                                 <p>E-commerce + Payment gateway (Personal project)</p>
-                                <a href="https://www.listen.company" target="_blank"><i class="bi bi-link"></i> www.listen.company <span style="color: red; font-weight: 700;">Click!</span></a>
+                                <a href="https://www.thamux.com" target="_blank"><i class="bi bi-link"></i> www.listen.company <span style="color: red; font-weight: 700;">Click!</span></a>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="owlcard">
-                        <img class="owlimage" src="image/cmsk.png">
-                        <div class="owlcardtext">
-                            <div>
+                        <a href="https://mycmsk.com" target="_blank">
+                            <img class="owlimage" src="image/cmsk.png">
+                        
+                            <div class="owlcardtext">
                                 <h3>CMSK</h3>
-                                <p>Automatic registration system + Payment gateway (Full-time job)</p>
-                                <a href="https://form.mycmsk.com" target="_blank"><i class="bi bi-link"></i> form.mycmsk.com <span style="color: red; font-weight: 700;">Click!</span></a>
+                                <p>Full E-leaning system + Payment gateway (Full-time job)</p>
+                                <a href="https://mycmsk.com" target="_blank"><i class="bi bi-link"></i> mycmsk.com <span style="color: red; font-weight: 700;">Click!</span></a>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -176,15 +199,17 @@
                     loop:true,
                     margin:10,
                     nav:true,
+                    auto:true,
+                    center:true,
                     responsive:{
                         0:{
-                            items:1
+                            items:2
                         },
                         600:{
-                            items:1
+                            items:4
                         },
                         1000:{
-                            items:1
+                            items:4
                         }
                     }
                 })
@@ -209,23 +234,25 @@
                 }.owlcard {
                     background-color: var(--white);
                     width: 90%;
-                    height: 50vh;
+                    height: 300px;
                     margin-left: 50%;
                     transform: translateX(-50%);
                     border-radius: 2vw;
                     max-width: 600px;
                     overflow: hidden;
                     position: relative;
+
+                    font-size: 10px;
                 }
                 .owlimage {
                     width: 100% !important;
-                    height: auto !important;
+                    height: 100% !important;
                     max-height: 100%;
 
                     margin-left: 50%;
                     transform: translateX(-50%);
 
-                    object-fit: contain;
+                    object-fit: cover;
                 }
                 .owlcardtext {
                     position: absolute;
@@ -233,8 +260,7 @@
                     left: 0;
                     width: 100%;
 
-                    display: flex;
-                    flex-direction: row;
+                    padding: 7px;
 
                     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,255,255,1));
                 }
@@ -292,6 +318,7 @@
                 .iconsvg {
                     width: 5vw;
                     min-width: 35px;
+                    max-width: 50px;
                     margin: 10px;
                 }
             </style>
